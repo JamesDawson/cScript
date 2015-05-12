@@ -264,7 +264,7 @@ function ScriptExecutionHelper
 
        if($null -ne $Credential)
        {
-          $scriptExecutionResult = Invoke-Command -ScriptBlock $ScriptBlock -ComputerName . -Credential $Credential
+          $scriptExecutionResult = Invoke-Command -ScriptBlock $ScriptBlock -ComputerName . -Credential $Credential -ErrorAction Stop
        }
        else
        {
